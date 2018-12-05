@@ -1,0 +1,29 @@
+<html>
+<head>
+<title>Help Desk Form</title>
+</head>
+<body>
+<form id="tiket_form" method="post">
+Type of product:&nbsp;&nbsp;<input type="text" name="product_type" value=""><br><br>
+Name of Buyer:&nbsp;&nbsp;<input type="text" name="cx_name" value=""><br><br>
+Phone Number:&nbsp;&nbsp; <input type="phone" name="phone" value=""><br><br>
+IMEI Number:&nbsp;&nbsp;  <input type="number" name="imei" value=""><br><br>
+Loocation:&nbsp;&nbsp;    <input type="text" name="location" value=""><br><br>
+Name of Vendor:&nbsp;&nbsp;<input type="text" name="vendor" value=""><br><br>
+Location of Vendor:&nbsp;&nbsp;<input type="text" name="ven_loc" value=""><br><br>
+
+Reason of ticket:&nbsp;&nbsp;<textarea name="problem" name="desc" rows="10" cols="50"value=""></textarea><br><br>
+
+<input type="submit" value="SUBMIT" onclick="alertmsg()">
+<input type="reset">
+</form>
+
+<script>
+function alertmsg(){
+
+alert("Ticket raised successfully");
+document.getElementById("ticket_form").reset();
+}
+</script>
+</body>
+</html>
