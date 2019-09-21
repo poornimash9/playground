@@ -1,0 +1,21 @@
+<html>
+    <style>
+    /* #imgageid{
+        background:url('1.jpg')
+    } */
+    </style>
+    <body>
+        <img src="1.jpg" id="imgageid" height="500" width="500" onclick="drawimage()">
+        <canvas id="canvasid"></canvas>
+
+        <script>
+            function drawimage(){
+                var canvas=document.getElementById('canvasid');
+                var imgid=document.getElementById('imgageid');
+                imgid.src="1.jpg"
+                var context=canvas.getContext('2d');
+                context.drawImage(imgid,176,333,200,100,0,0,500,500);
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,46 @@
+<html>
+<head>
+    <title>Google map api</title>
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <h3>Image Upload</h3>
+    <form>
+    <input type="file" id="images" name="images" accept="image/*" onchange="openFile(event)">
+    <input type="button" name="add" value="Attach Photo" onclick="openFile(event)">
+    <img id="abc">
+    </form>
+
+
+    <script>
+    var openFile = function(file) {
+    var input = file.target;
+
+    var reader = new FileReader();
+    reader.onload = function(){
+        var img=document.getElementById('abc');
+        img.onload=function(){
+            getImageData(img);
+            img.src=reader.result;
+        }
+        
+    //   var dataURL = reader.result;
+    //   var output = document.getElementById('abc');
+    //   output.src = dataURL;
+    //   console.log(dataURL)
+
+    };
+    reader.readAsDataURL(input.files[0]);
+    // reader.readAsArrayBuffer(reader.result)
+  };
+    </script>
+</body>
+</html>

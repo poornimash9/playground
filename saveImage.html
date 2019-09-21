@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>image save</title>
+    </head>
+    <body>
+        <a id="downloadLnk" download="1.jpg">Download as image</a>
+        <canvas id="canvas"></canvas>
+
+            <script>
+                function download() {
+                    var canvas=document.getElementById('canvas');
+                    var context=canvas.getContext('2d');
+                    var dt = canvas.toDataURL('image/jpg');
+                    location.href ="/var/www/html/c-on/c-on/category/"+dt;
+                };
+                downloadLnk.addEventListener('click', download, false);
+            </script>
+    </body>
+</html>
